@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (width >= 1000px) {
+    html{
+        width: 100%;
+        height: 100%;
+        background-image: url("photos/background.jpg");
+    }
+    #root{
+        height: 90%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 35vh 60vh;
+        padding: 5%;
+        grid-column-gap: 5%;
+        grid-row-gap: 5vh;
+        grid-template-areas: 
+        "add_task title title"
+        "ticket1 ticket2 ticket3" 
+        ;
+    }
+    
+    .menu{
+        grid-area: menu_;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #ECFFE9;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 30px 30px 0px;
+    }
+
+    .menu_text{
+        height: 10vh;
+        padding-left: 13%;
+        line-height: 10vh;
+    }
+
+    #text1{
+        margin-top: 15vh;
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text1:hover{
+        background: #E9D4FF;
+    }
+
+    #text2{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text2:hover{
+        background: #C0E8FF;
+    }
+
+    #text3{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text3:hover{
+        background: #FFDAAF;
+    }
+
+    #text4{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text4:hover{
+        background: #C5FFBB;
+    }
+
+    .title{
+        grid-area: title;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 90px;
+        text-align: right;
+        padding-top: 30px;
+        padding-right: 50px;
+    }
+
+    .ticket1{
+        grid-area: ticket1;
+        font-family: 'Montserrat';
+        height: fit-content;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        background: #C0E8FF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket1{
+        color: #425C5F;
+        line-height: 10vh;
+    }
+
+    .add{
+        background-image: url("photos/add_icon.svg");
+        height: 52px;
+        width: 53px;
+        transition: 0.1s ease-out 100ms;
+    }
+
+    .add:hover{
+        transform: scale(1.1);
+    }
+
+    .add:active{
+        transform: scale(0.8);
+    }
+    
+    .ticket2{
+        grid-area: ticket2;
+        font-family: 'Montserrat';
+        font-style: normal;
+        height: fit-content;
+        font-weight: 500;
+        font-size: 24px;
+        background: #FFDAAF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket2{
+        color: #5F5342;
+        line-height: 10vh;
+    }
+    
+    .ticket3{
+        grid-area: ticket3;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        height: fit-content;
+        font-size: 24px;
+        background: #C2FCB9;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket3{
+        color: #465F42;
+        line-height: 10vh;
+    }
+    .add_task{
+        grid-area: add_task;
+        font-family: 'Montserrat';
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        background: #E9D4FF;
+        border-radius: 30px;
+        text-align: center;
+        display: grid;
+    }
+    .text_task{
+        color: #3c007b;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 5vh;
+    }
+    .label{
+        color: #3c007b;
+        text-align: left;
+        font-weight: 400;
+        justify-self: center;
+        font-size: 16px;
+        line-height: 3vh;
+    }
+    .task_grid{
+        display: grid;
+        row-gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .task_ticket1{
+        display: grid;
+        background: #DDF3FF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: left;
+    }
+
+    .task_ticket2{
+        display: grid;
+        background: #fff5dd;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: left;
+    }
+
+    .task_ticket3{
+        display: grid;
+        background: #d1f9d8;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: left;
+    }
+    .input {
+        display: grid;
+        justify-items: start;
+        position: relative;
+      }
+      
+      .input__box {
+        height: 15px;
+        width: 80%;
+        margin-bottom: 10px;
+        border-radius: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 25px;
+        border: none;
+        transition: 0.2s;
+        justify-self: center;
+      }
+      
+      .input__box:focus {
+        box-shadow: 0 0 10px 2000px rgba(0, 0, 0, 0.5);
+        outline: none;
+      }
+      
+      .input_submit {
+        position: relative;
+        align-self: center;
+        width: 100px;
+        height: 40px;
+        border-radius: 15px;
+        right: 0px;
+        border: none;
+        font-size: 15px;
+        background-color: #691abe;
+        color: white;
+        transition: 0.2s all;
+        justify-self: center;
+        margin-bottom: 5px;
+      }
+      
+      .input_submit:hover {
+        background-color: #9c60db;
+      }
+      
+      .input_submit:active {
+        transform: scale(0.8);
+      }
+      .task_title{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        margin-right: 30%;
+        font-size: 20px;
+        line-height: 30px;
+      }
+      .task_description{
+         margin-top: 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+      .icon_del {
+        margin-top: 5px;
+        justify-self: right; 
+        margin-left: 20px;
+        transition: 0.2s all;
+      }
+      .icon_del:hover{
+        transform: scale(1.2);
+      }
+      .icon_edit{
+        margin-top: 5px;
+        justify-self: right;
+        margin-left: 20px;
+        transition: 0.2s all;
+      }
+      .icon_edit:hover{
+        transform: scale(1.2);
+      }
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .modal-content {
+        position: absolute;
+        z-index: 10;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 4px;
+        max-width: 400px;
+      }
+      
+      .modal h2 {
+        margin-top: 0;
+      }
+      
+      .modal p {
+        margin-bottom: 20px;
+      }
+      
+      .modal-buttons {
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      .modal-buttons button {
+        margin-left: 10px;
+        padding: 8px 16px;
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .modal-buttons button:hover {
+        background-color: #d32f2f;
+      }
+
+      .modal-edit{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: grid;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-buttons-edit {
+        display: grid;
+        grid-auto-flow: column;
+      }
+
+      .modal-content-edit {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 4px;
+        max-width: 400px;
+      }
+    .form_edit{
+        display:grid;
+    }  
+    .upd_btn{
+        margin-top: 5vh;
+        justify-self: start;
+        padding: 8px 16px;
+        background-color: #05b022;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .cancel_btn{
+        margin-top: 5vh;
+        justify-self: right;
+        padding: 8px 16px;
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    textarea{
+        width: 100%;
+        height: 15vh;
+    }    
+    .input_edit{
+        width: 100%;
+    }
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      
+      .modal-content {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        background-color: rgb(244, 196, 196);
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 50px;
+      }
+      
+      .modal-header {
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      .close-button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #555;
+        cursor: pointer;
+      }
+      
+      .warning {
+        color: rgb(188, 56, 26);
+        font-weight: bold;
+        margin-top: 5px;
+      }
+  }
+
+  @media screen and (width < 1000px) {
+    html{
+        width: 100%;
+        height: 100%;
+        background-image: url("photos/background_mobile.jpg");
+    }
+
+    #root{
+        display: grid;
+        grid-template-columns: 175px 2fr 0.5fr;
+        grid-template-rows: 10vh 27vh 27vh 27vh;
+        grid-column-gap: 10%;
+        grid-row-gap: 6vh;
+        grid-template-areas: 
+        "menu_ title title"
+        "menu_ ticket1 rigth_gap"
+        "menu_ ticket2 rigth_gap" 
+        "menu_ ticket3 rigth_gap"  
+        ;
+    }
+    
+    .menu{
+        grid-area: menu_;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #ECFFE9;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 30px 30px 0px;
+    }
+
+    .menu_text{
+        height: 10vh;
+        padding-left: 13%;
+        line-height: 10vh;
+    }
+
+    #text1{
+        margin-top: 15vh;
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text1:hover{
+        background: #E9D4FF;
+    }
+
+    #text2{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text2:hover{
+        background: #C0E8FF;
+    }
+
+    #text3{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text3:hover{
+        background: #FFDAAF;
+    }
+
+    #text4{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text4:hover{
+        background: #C5FFBB;
+    }
+    
+    .title{
+        grid-area: title;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 45px;
+        text-align: right;
+        padding-top: 5%;
+        padding-right: 5%;
+    }
+    
+    .ticket1{
+        grid-area: ticket1;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #C0E8FF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket1{
+        color: #425C5F;
+        line-height: 10vh;
+    }
+
+    .add{
+        background-image: url("photos/add_icon.svg");
+        height: 52px;
+        width: 53px;
+        transition: 0.1s ease-out 100ms;
+    }
+
+    .add:hover{
+        transform: scale(1.1);
+    }
+    
+    .add:active{
+        transform: scale(0.8);
+    }
+
+    .ticket2{
+        grid-area: ticket2;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #FFDAAF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket2{
+        color: #5F5342;
+        line-height: 10vh;
+    }
+    
+    .ticket3{
+        grid-area: ticket3;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #C2FCB9;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket3{
+        color: #465F42;
+        line-height: 10vh;
+    }
+  }

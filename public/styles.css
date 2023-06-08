@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+
+@media screen and (width >= 1000px) {
+    html{
+        width: 100%;
+        height: 100%;
+        background-image: url("photos/background.jpg");
+    }
+    .grid_containeer{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 30vh 65vh;
+        grid-column-gap: 5%;
+        grid-row-gap: 5vh;
+        grid-template-areas: 
+        "menu_ title title title"
+        "menu_ ticket1 ticket2 ticket3" 
+        ;
+    }
+    
+    .menu{
+        grid-area: menu_;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #ECFFE9;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 30px 30px 0px;
+    }
+
+    .menu_text{
+        height: 10vh;
+        padding-left: 13%;
+        line-height: 10vh;
+    }
+
+    #text1{
+        margin-top: 15vh;
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text1:hover{
+        background: #E9D4FF;
+    }
+
+    #text2{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text2:hover{
+        background: #C0E8FF;
+    }
+
+    #text3{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text3:hover{
+        background: #FFDAAF;
+    }
+
+    #text4{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text4:hover{
+        background: #C5FFBB;
+    }
+
+    .title{
+        grid-area: title;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 90px;
+        text-align: right;
+        padding-top: 5%;
+        padding-right: 5%;
+    }
+    
+    .ticket1{
+        grid-area: ticket1;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        background: #C0E8FF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket1{
+        color: #425C5F;
+        line-height: 10vh;
+    }
+
+    .add{
+        margin-top: 100%;
+        transition: 0.1s ease-out 100ms;
+    }
+
+    .add:hover{
+        transform: scale(1.1);
+    }
+
+    
+    .ticket2{
+        grid-area: ticket2;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        background: #FFDAAF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket2{
+        color: #5F5342;
+        line-height: 10vh;
+    }
+    
+    .ticket3{
+        grid-area: ticket3;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        background: #C2FCB9;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket3{
+        color: #465F42;
+        line-height: 10vh;
+    }
+  }
+
+  @media screen and (width < 1000px) {
+    html{
+        width: 100%;
+        height: 100%;
+        background-image: url("photos/background_mobile.jpg");
+    }
+
+    .grid_containeer{
+        display: grid;
+        grid-template-columns: 175px 2fr 0.5fr;
+        grid-template-rows: 10vh 27vh 27vh 27vh;
+        grid-column-gap: 10%;
+        grid-row-gap: 6vh;
+        grid-template-areas: 
+        "menu_ title title"
+        "menu_ ticket1 rigth_gap"
+        "menu_ ticket2 rigth_gap" 
+        "menu_ ticket3 rigth_gap"  
+        ;
+    }
+    
+    .menu{
+        grid-area: menu_;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #ECFFE9;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 30px 30px 0px;
+    }
+
+    .menu_text{
+        height: 10vh;
+        padding-left: 13%;
+        line-height: 10vh;
+    }
+
+    #text1{
+        margin-top: 15vh;
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text1:hover{
+        background: #E9D4FF;
+    }
+
+    #text2{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text2:hover{
+        background: #C0E8FF;
+    }
+
+    #text3{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text3:hover{
+        background: #FFDAAF;
+    }
+
+    #text4{
+        transition: 0.3s ease-out 100ms;
+    }
+
+    #text4:hover{
+        background: #C5FFBB;
+    }
+    
+    .title{
+        grid-area: title;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 45px;
+        text-align: right;
+        padding-top: 5%;
+        padding-right: 5%;
+    }
+    
+    .ticket1{
+        grid-area: ticket1;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #C0E8FF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket1{
+        color: #425C5F;
+        line-height: 10vh;
+    }
+
+    .add{
+        transition: 0.1s ease-out 100ms;
+    }
+
+    .add:hover{
+        transform: scale(1.1);
+    }
+    
+    .ticket2{
+        grid-area: ticket2;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #FFDAAF;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket2{
+        color: #5F5342;
+        line-height: 10vh;
+    }
+    
+    .ticket3{
+        grid-area: ticket3;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        background: #C2FCB9;
+        box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    .text_ticket3{
+        color: #465F42;
+        line-height: 10vh;
+    }
+  }
